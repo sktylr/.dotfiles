@@ -1,2 +1,4 @@
-alias grep='grep --color=auto'
+alias cls='clear'
 alias conan='cd ~/conan && make run'
+alias grep='grep --color=auto'
+alias ll='ls -l'
