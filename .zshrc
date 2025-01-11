@@ -1,8 +1,9 @@
 ## General
-. ./aliases.zsh
-. ./functions.zsh
+export DOTFILE_PATH=$HOME/code/.dotfiles
+. $DOTFILE_PATH/aliases.zsh
+. $DOTFILE_PATH/functions.zsh
 
 ### Git
-. ./git/aliases.zsh
-. ./git/functions.zsh
+. $DOTFILE_PATH/git/aliases.zsh
+. $DOTFILE_PATH/git/functions.zsh
 
