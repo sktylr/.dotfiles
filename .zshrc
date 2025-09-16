@@ -6,4 +6,4 @@ export DOTFILE_PATH=$HOME/code/.dotfiles
 ### Git
 . $DOTFILE_PATH/git/aliases.zsh
 . $DOTFILE_PATH/git/functions.zsh
-
+export PAGER="less -FRX"
