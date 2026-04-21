@@ -1,11 +1,14 @@
-## General
-export DOTFILE_PATH=$HOME/code/.dotfiles
-. $DOTFILE_PATH/aliases.zsh
-. $DOTFILE_PATH/functions.zsh
+() {
+    local here="$( dirname ${(%):-%x} )"
 
-### Git
-. $DOTFILE_PATH/git/aliases.zsh
-. $DOTFILE_PATH/git/functions.zsh
+    ## General
+    . $here/aliases.zsh
+    . $here/functions.zsh
+
+    ## Git
+    . $here/git/aliases.zsh
+    . $here/git/functions.zsh
+}
 
 export LESS="-FRX"
-export PAGER="LESS"
+export PAGER="less"
