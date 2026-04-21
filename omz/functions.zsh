@@ -1,6 +1,3 @@
-ZSH_THEME_LIKED="$HOME/.config/zsh/themes_liked"
-ZSH_THEME_DISLIKED="$HOME/.config/zsh/themes_disliked"
-
 _zsh_theme_ensure_files() {
     mkdir -p "$(dirname $ZSH_THEME_LIKED)"
     touch "$ZSH_THEME_LIKED" "$ZSH_THEME_DISLIKED"
@@ -15,6 +12,8 @@ theme-like() {
     else
         echo "$theme" >> "$ZSH_THEME_LIKED"
         echo "Liked: $theme"
+        sed -i '' "/^${theme}$/d" "$ZSH_THEME_DISLIKED"
+        ZSH_THEME_RANDOM_IGNORED=( ${ZSH_THEME_RANDOM_IGNORED:#$theme} )
     fi
 }
 
@@ -28,6 +27,7 @@ theme-dislike() {
     echo "$theme" >> "$ZSH_THEME_DISLIKED"
     echo "Disliked: $theme"
     sed -i '' "/^${theme}$/d" "$ZSH_THEME_LIKED"
+    ZSH_THEME_RANDOM_IGNORED+=( "$theme" )
   fi
 }
 
