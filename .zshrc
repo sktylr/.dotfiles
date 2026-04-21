@@ -1,5 +1,15 @@
+export LESS="-FRX"
+export PAGER="less"
+
+export EDITOR="vi"
+
+export LANG="en_IE.UTF-8"
+
 () {
     local here="$( dirname ${(%):-%x} )"
+
+    ## oh-my-zsh
+    . $here/omz/omz.zsh
 
     ## General
     . $here/aliases.zsh
@@ -9,6 +19,3 @@
     . $here/git/aliases.zsh
     . $here/git/functions.zsh
 }
-
-export LESS="-FRX"
-export PAGER="less"
