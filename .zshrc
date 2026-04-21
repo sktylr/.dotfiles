@@ -10,6 +10,7 @@ export LANG="en_IE.UTF-8"
 
     ## oh-my-zsh
     . $here/omz/omz.zsh
+    . $here/omz/functions.zsh
 
     ## General
     . $here/aliases.zsh
