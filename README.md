@@ -31,3 +31,4 @@ The settings can be found in [`omz`](./omz/).
 I am currently exploring which theme I'd like to use, so have a random theme loaded every time I start a new shell session.
 I can then mark themes as ones that I like or dislike to narrow down the options.
 When creating a new shell session, oh-my-zsh avoids picking a random theme that I have already marked as one I don't like.
+This can be overridden by specifying `ZSH_THEME=<theme>` before sourcing [`.zshrc`](./.zshrc).

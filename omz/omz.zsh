@@ -1,11 +1,15 @@
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="random"
-ZSH_THEME_LIKED="$HOME/.config/zsh/themes_liked"
-ZSH_THEME_DISLIKED="$HOME/.config/zsh/themes_disliked"
+: ${ZSH_THEME:="random"}
+
+if [[ "$ZSH_THEME" == "random" ]]; then
+    ZSH_THEME_LIKED="$HOME/.config/zsh/themes_liked"
+    ZSH_THEME_DISLIKED="$HOME/.config/zsh/themes_disliked"
+fi
 
 () {
     [[ ! -f "$ZSH_THEME_DISLIKED" ]] && return
+    [[ "$ZSH_THEME" != "random" ]] && return
     ZSH_THEME_RANDOM_IGNORED=( ${(f)"$(cat $ZSH_THEME_DISLIKED)"} )
 }
 
