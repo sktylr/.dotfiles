@@ -8,9 +8,15 @@ set expandtab
 set number
 set autoindent
 
-runtime! defaults.vim
-let g:skip_defaults_vim = 1
+if !has('nvim')
+    runtime! defaults.vim
+    let g:skip_defaults_vim = 1
+endif
 set mouse=
 
-set termguicolors
-colorscheme sorbet
+if exists('+termguicolors')
+    set termguicolors
+endif
+if !empty(globpath(&runtimepath, 'colors/sorbet.vim'))
+    colorscheme sorbet
+endif

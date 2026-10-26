@@ -10,12 +10,19 @@ To use the aliases and functions within this repo in zsh, add the following line
 . path/to/.dotfiles/.zshrc
 ```
 
-#### vim
+#### vi, vim, and neovim
 
 To use the vim config, add the following line to `$HOME/.vimrc`
 
-```shell
+```vim
 source path/to/.dotfiles/.vimrc
+```
+
+Install Neovim on macOS with `brew install neovim`. Create
+`${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.vim` and add:
+
+```vim
+source path/to/.dotfiles/.config/nvim/init.vim
 ```
 
 #### git

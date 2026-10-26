@@ -1,7 +1,8 @@
 export LESS="-FRX"
 export PAGER="less"
 
-export EDITOR="vi"
+export VISUAL="nvim"
+export EDITOR="nvim"
 
 export LANG="en_IE.UTF-8"
 
